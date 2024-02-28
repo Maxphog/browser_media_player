@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/browser_media_player/favicon.ico">
     <title>BMP</title>
 </head>
 <body>
@@ -20,35 +21,25 @@
         <br>
         <!-- we'll be using the embeded audio element -->
         <!-- <audio src=""></audio> -->
-
-        <!-- <figure>
-            <figcaption>Listen to the T-Rex:</figcaption>
-            <audio controls src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
-            <a href="/browser_media_player/test_sounds/t-rex-roar.mp3"> Download audio </a>
-        </figure> -->
-
-        <!-- <figure>
-            <figcaption>Listen to the ambient jungle sound:</figcaption>
-            <audio controls src="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"></audio>
-            <a href="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"> Download audio </a>
-        </figure> -->
         
-        <!-- <figure>
-            <figcaption>Listen to the weather thunder sound :</figcaption>
-            <audio controls src="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"></audio>
-            <a href="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"> Download audio </a>
-        </figure> -->
-        
-        <figure id="audio_player_wrapper">
-            <figcaption id="mp3_metadata_info"></figcaption>
-            <audio id="audio_player" controls loop preload="metadata" src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+        <figure id="audioPlayerWrapper">
+            
+            <figcaption> media: </figcaption>
+            
+            <p id="metadataInfo"></p>
+            
+            <audio id="audioplayer" controls preload="metadata" src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+
+            <button id="toggleLoop">Toggle Loop</button>
+            
             <a id="download_link" href="/browser_media_player/test_sounds/t-rex-roar.mp3"> Download audio </a>
+
         </figure>
+
 
     </main>
     <hr>
     <footer> Maphog @ <a href="https://github.com/Maxphog/">github</a> </footer>
+    <script src="/browser_media_player/js/scripts.js"></script>
 </body>
 </html>
-
-
