@@ -17,25 +17,23 @@
     <hr>
     <main>
         <h1>Browser Media Player</h1>
-        <p>player:</p>
-        <br>
+
         <!-- we'll be using the embeded audio element -->
         <!-- <audio src=""></audio> -->
         
         <figure id="audioPlayerWrapper">
             
-            <figcaption> media: </figcaption>
+            <figcaption>Audio Player</figcaption>
+
+            <audio id="audioPlayer" controls preload="metadata" src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
             
             <p id="metadataInfo"></p>
             
-            <audio id="audioplayer" controls preload="metadata" src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
-
-            <button id="toggleLoop">Toggle Loop</button>
+            <button id="toggleLoopBtn">Toggle Loop</button>
             
-            <a id="download_link" href="/browser_media_player/test_sounds/t-rex-roar.mp3"> Download audio </a>
+            <a id="downloadLink" href="/browser_media_player/test_sounds/t-rex-roar.mp3"> Download audio </a>
 
         </figure>
-
 
     </main>
     <hr>

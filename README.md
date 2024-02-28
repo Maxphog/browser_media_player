@@ -1,10 +1,10 @@
 # browser_media_player
-This project, housed in a public repository, represents my attempt to utilize the Firefox browser as an MP3 media player. It aims to create a simple media player using HTML, CSS, and JavaScript that runs directly within the browser, enabling it to read local audio files and present the user with the metadata of the audio file seamlessly.
+This project, housed in a public repository, represents my attempt to utilize the Firefox browser as an MP3 media player. It aims to create a simple media player using HTML, CSS, and JavaScript that runs directly within the browser, enabling the user to load local audio files with metadata and present the user that metadata seamlessly.
 
 ## Features
 - Play local audio files.
 - Display metadata of the audio files:
-    - file length, title, type, date, author ...
+    - file length, title, type, date, author, duration ...
 - All shown with a user-friendly interface.
 
 ## Technologies Used
