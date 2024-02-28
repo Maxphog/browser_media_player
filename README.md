@@ -22,3 +22,11 @@ Contributions are welcome! If you have any suggestions or improvements, feel fre
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
+
+
+
+
+## Log 
+- 2/27/2024
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+    - https://blog.archive.org/2023/05/20/crash-bark-boom-the-usc-sound-effects-library/
