@@ -3,7 +3,12 @@ This project, housed in a public repository, represents my attempt to utilize th
 
 ## Features
 - Play local audio files.
-- Display metadata of the audio files.
+- Display metadata of the audio files:
+    - file length
+    - file title
+    - file type
+    - file date
+    - file author
 - User-friendly interface.
 
 ## Technologies Used
