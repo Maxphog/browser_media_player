@@ -4,12 +4,8 @@ This project, housed in a public repository, represents my attempt to utilize th
 ## Features
 - Play local audio files.
 - Display metadata of the audio files:
-    - file length
-    - file title
-    - file type
-    - file date
-    - file author
-- User-friendly interface.
+    - file length, title, type, date, author ...
+- All shown with a user-friendly interface.
 
 ## Technologies Used
 - HTML
@@ -27,9 +23,6 @@ Contributions are welcome! If you have any suggestions or improvements, feel fre
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-
-
-
 
 ## Log 
 - 2/27/2024

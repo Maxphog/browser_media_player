@@ -6,33 +6,49 @@
     <title>BMP</title>
 </head>
 <body>
-    <header></header>
+    <header> 
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="/">Save</a> |
+            <a href="/">Load</a> |
+        </nav>
+    </header>
     <hr>
     <main>
         <h1>Browser Media Player</h1>
         <p>player:</p>
+        <br>
+        <!-- we'll be using the embeded audio element -->
         <!-- <audio src=""></audio> -->
+
         <!-- <figure>
             <figcaption>Listen to the T-Rex:</figcaption>
-            <audio controls src="/media/cc0-audio/t-rex-roar.mp3"></audio>
-            <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
+            <audio controls src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+            <a href="/browser_media_player/test_sounds/t-rex-roar.mp3"> Download audio </a>
         </figure> -->
 
-        <figure>
+        <!-- <figure>
             <figcaption>Listen to the ambient jungle sound:</figcaption>
             <audio controls src="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"></audio>
             <a href="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"> Download audio </a>
-        </figure>
+        </figure> -->
         
-        <figure>
+        <!-- <figure>
             <figcaption>Listen to the weather thunder sound :</figcaption>
             <audio controls src="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"></audio>
             <a href="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"> Download audio </a>
+        </figure> -->
+        
+        <figure id="audio_player_wrapper">
+            <figcaption id="mp3_metadata_info"></figcaption>
+            <audio id="audio_player" controls loop preload="metadata" src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+            <a id="download_link" href="/browser_media_player/test_sounds/t-rex-roar.mp3"> Download audio </a>
         </figure>
-          
 
     </main>
     <hr>
-    <footer></footer>
+    <footer> Maphog @ <a href="https://github.com/Maxphog/">github</a> </footer>
 </body>
 </html>
+
+
