@@ -1,11 +1,55 @@
 <!DOCTYPE html>
+<!-- Author: Maxphog - Start at The README.md -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/browser_media_player/favicon.ico">
+    <link rel="stylesheet" href="/browser_media_player/css/style.css">
+    <title>BMP</title>
 </head>
 <body>
-    hi
+    <header> 
+        <nav>
+            <a href="../index.html" id="homeLink">Home</a> | 
+            <a href="#" style="pointer-events: none;" id="saveLink">Save</a> |
+            <a href="#" style="pointer-events: none;" id="loadLink">Load</a> |
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h1>Browser Media Player</h1>
+
+        <hr>
+
+        <!-- well be creating our own audio element with the inclusion of a mp3 file added by user. -->
+        
+        <section id="audioPlayerWrapper">
+            <audio controls src="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"></audio>
+            <audio controls src="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"></audio>
+            <audio controls src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+            <h2>- Audio Player Buttons -</h2>
+            <section>
+                <button id="toggleLoopBtn" >Toggle Loop</button>
+                <a id="downloadLink" style="pointer-events: none;"> Download audio </a>
+            </section>
+
+
+        </section>
+
+        
+        <h2>MP3 metadata:</h2>
+        
+        <secion id="metadataInfoWrapper">
+            
+            <h3>MD info:</h3>
+            
+            <p id="metadataInfo">♫</p>
+
+        </secion>
+    </main>
+    <hr>
+    <footer> Maxphog @ <a href="https://github.com/Maxphog/">Github</a> </footer>
+    <script src="/browser_media_player/js/test_scripts.js"></script>
 </body>
 </html>
