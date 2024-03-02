@@ -2,6 +2,30 @@
  * Author: Maxphog - Start at The README.md 
  */
 
+/** 3/2/2024 code */
+
+// document Audio Player Wrapper (APW)
+let dom_APW = document.getElementById("audioPlayerWrapper");
+console.log(dom_APW);
+
+// document Metadata Info paragraph
+let dom_MDI = document.getElementById("metadataInfo");
+console.log(dom_MDI);
+
+// creating the main audio player
+let dom_MAP = document.createElement("audio");
+dom_MAP.setAttribute("class", "audioPlayer");
+dom_MAP.setAttribute("id", "mainAudioPlayer");
+dom_MAP.setAttribute("controls","");
+// console.log(dom_MAP);
+
+// append AP as the new first child of the wrapper
+dom_APW.insertBefore(dom_MAP, dom_APW.firstChild); 
+console.log(dom_MAP);
+
+
+
+/** OLDCODE VVVV */
 // // initialization of metadata value objects
 // let duration;
 // let author;
