@@ -20,26 +20,7 @@
     <main>
         <h1>Browser Media Player</h1>
 
-        <!-- well be creating our own audio element with the inclusion of a mp3 file added by user. -->
-        
-        <figure id="audioPlayerWrapper">
-            
-            <!-- <br>
-            <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
-            <br>
-            <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"></audio>
-            <br>
-            <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"></audio> -->
-            
-            <br>
-            <button id="toggleLoopBtn" hidden >Toggle Loop</button>
-            
-            <br>
-            <a id="downloadLink" hidden > Download audio </a>
-
-            <figcaption>- Audio Player -</figcaption>
-
-        </figure>
+        <hr>
 
         <form action="#">
 
@@ -54,6 +35,22 @@
             <button id="fileUploadBtn" type="submit"> Upload </button>
         
         </form>
+        
+        <hr>
+        
+        <!-- well be creating our own audio element with the inclusion of a mp3 file added by user. -->
+        
+        <section id="audioPlayerWrapper">
+            
+            <h2>- Audio Player Buttons -</h2>
+           <section>
+             <button id="toggleLoopBtn" >Toggle Loop</button>
+             <a id="downloadLink" > Download audio </a>
+           </section>
+
+
+        </section>
+
         
         <h2>MP3 metadata:</h2>
         

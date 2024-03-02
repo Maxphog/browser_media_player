@@ -26,7 +26,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Log 
 - 2/27/2024
+    - test_sounds source: https://blog.archive.org/2023/05/20/crash-bark-boom-the-usc-sound-effects-library/
     - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
-    - https://blog.archive.org/2023/05/20/crash-bark-boom-the-usc-sound-effects-library/
 - 3/2/2024
     - https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView

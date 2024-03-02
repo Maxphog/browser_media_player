@@ -85,8 +85,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     dom_downloadLink.setAttribute("href", fileURL)
 
                     dom_mainAudioPlayer.hidden = false;
-                    dom_toggleLoopBtn.hidden = false;
-                    dom_downloadLink.hidden = false;
                 } else {
                     console.error("File is not an MP3");
                     // Provide user feedback about the error
