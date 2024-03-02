@@ -4,58 +4,74 @@
 
 /** 3/2/2024 code */
 
-// documents Audio Player Wrapper (APW)
-let dom_APW = document.getElementById("audioPlayerWrapper");
-console.log(dom_APW);
+// Ensure that the DOM content is fully loaded before executing scripts
+document.addEventListener("DOMContentLoaded", function() {
 
-// documents Metadata Info paragraph
-let dom_MDI = document.getElementById("metadataInfo");
-console.log(dom_MDI);
+    // Select necessary DOM elements
+    
+    // documents Audio Player Wrapper (APW)
+    const dom_audioPlayerWrapper = document.getElementById("audioPlayerWrapper");
+    console.log(dom_audioPlayerWrapper);
+    // documents Metadata Info paragraph
+    const dom_metadataInfo = document.getElementById("metadataInfo");
+    console.log(dom_metadataInfo);
+    // documents file upload form and its input
+    const dom_fileUploadForm = document.querySelector("form");
+    const dom_fileUploadInput = document.getElementById("fileUploadInput");
+    
+    // creating the documents main audio player
+    const dom_mainAudioPlayer = document.createElement("audio");
+    dom_mainAudioPlayer.setAttribute("class", "audioPlayer");
+    dom_mainAudioPlayer.setAttribute("id", "mainAudioPlayer");
+    dom_mainAudioPlayer.setAttribute("controls","");
+    dom_mainAudioPlayer.setAttribute("hidden","");
+    
+    // append AP as the new first child of the wrapper
+    dom_audioPlayerWrapper.insertBefore(dom_mainAudioPlayer, dom_audioPlayerWrapper.firstChild); 
+    // console.log(dom_mainAudioPlayer);
+    // dom_mainAudioPlayer.setAttribute("src", "/browser_media_player/test_sounds/t-rex-roar.mp3")
+    console.log(dom_mainAudioPlayer);
+    
+    /**
+     *  This function sets the src attribute of our audio elements. 
+     * @param {Object} audioElement - take the audio element we want to set the source for  
+     * @param {String} source  - the URI source the audio element will grab the audio from
+     * 
+     * @returns null
+     */
+    function setAudioSource(audioElement, source) {
+        console.log("setAudioSource");
+        console.log("Inputs:");
+        console.log("audioElement:",audioElement);
+        console.log("source:",source);
+        audioElement.setAttribute("src", source);
+        console.log("Audio source set:", audioElement);
+    }
 
-// creating the documents main audio player
-let dom_MAP = document.createElement("audio");
-dom_MAP.setAttribute("class", "audioPlayer");
-dom_MAP.setAttribute("id", "mainAudioPlayer");
-dom_MAP.setAttribute("controls","");
-dom_MAP.setAttribute("hidden","");
-// console.log(dom_MAP);
+    // testing audio file switching
+    // setAudioSource(dom_mainAudioPlayer,"/browser_media_player/test_sounds/t-rex-roar.mp3");
+    // setTimeout(function() {
+    //     setAudioSource(dom_mainAudioPlayer, "/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3");
+    // }, 1000);
+    // setTimeout(function() {
+    //     setAudioSource(dom_mainAudioPlayer,"/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3");
+    // }, 2000);
 
-// append AP as the new first child of the wrapper
-dom_APW.insertBefore(dom_MAP, dom_APW.firstChild); 
+    // Event listener for file upload form submission
+    dom_fileUploadForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        console.log("upload...  ");
+        
+        console.log("Submission Event:",event);
 
-// dom_MAP.setAttribute("src", "/browser_media_player/test_sounds/t-rex-roar.mp3")
-
-console.log(dom_MAP);
-
-/**
- *  This function sets the src attribute of our audio elements. 
- * @param {Object} audioElement - take the audio element we want to set the source for  
- * @param {String} source  - the URI source the audio element will grab the audio from
- * 
- * @returns null
- */
-function setAudioSource(audioElement, source) {
-    audioElement.setAttribute("src", source)
-    console.log("Audio source set:", audioElement);
-    return null
-}
-// testing audio file switching
-// setAudioSource(dom_MAP,"/browser_media_player/test_sounds/t-rex-roar.mp3");
-// setTimeout(function() {
-//     setAudioSource(dom_MAP, "/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3");
-// }, 1000);
-// setTimeout(function() {
-//     setAudioSource(dom_MAP,"/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3");
-// }, 2000);
-
-// documents File Upload Form Logic 
-let mediaFileUploadForm = document.querySelector("form");
-mediaFileUploadForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-    console.log("upload...  ");
-    console.log("Submission Event:",event);
-
-})
-console.log(mediaFileUploadForm);
-
-
+        const file = dom_fileUploadInput.files[0];
+        if (file) {
+            const fileURL = URL.createObjectURL(file);
+            setAudioSource(dom_mainAudioPlayer, fileURL);
+            dom_mainAudioPlayer.hidden = false
+        } else {
+            console.error("No file selected for upload");
+        }
+    });
+});
