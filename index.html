@@ -20,21 +20,47 @@
     <main>
         <h1>Browser Media Player</h1>
 
-        <!-- we'll be using the embeded audio element -->
-        <!-- <audio src=""></audio> -->
+        <!-- well be creating our own audio element with the inclusion of a mp3 file added by user. -->
         
         <figure id="audioPlayerWrapper">
             
-            <figcaption>Audio Player</figcaption>
-
-            <!-- <audio id="audioPlayer" controls></audio> -->
-            <a id="downloadLink"> Download audio </a>
+            <!-- <br>
+            <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+            <br>
+            <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/THUN_Thunder claps with long ring out; variation_CS_USC.mp3"></audio>
+            <br>
+            <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"></audio> -->
+            
+            <br>
             <button id="toggleLoopBtn">Toggle Loop</button>
+            
+            <br>
+            <a id="downloadLink"> Download audio </a>
+
+            <figcaption>- Audio Player -</figcaption>
 
         </figure>
-        <h2>MP3 metadata</h2>
+
+        <form action="#">
+
+            <label for="fileUpload">
+            
+                File:
+            
+                <input id="fileUpload" type="file">
+
+            </label>
+
+            <button id="fileUploadBtn" type="submit"> Upload </button>
+        
+        </form>
+        
+        <h2>MP3 metadata:</h2>
+        
         <div id="metadataInfoWrapper">
+            
             <h3>MD info:</h3>
+            
             <p id="metadataInfo">♫</p>
 
         </div>
