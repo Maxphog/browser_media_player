@@ -1,17 +1,19 @@
 <!DOCTYPE html>
+<!-- Author: Maxphog - Start at The README.md -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/browser_media_player/favicon.ico">
+    <link rel="stylesheet" href="/browser_media_player/css/style.css">
     <title>BMP</title>
 </head>
 <body>
     <header> 
         <nav>
-            <a href="/">Home</a> | 
-            <a href="/">Save</a> |
-            <a href="/">Load</a> |
+            <a href="#" id="homeLink">Home</a> | 
+            <a href="#" id="saveLink">Save</a> |
+            <a href="#" id="loadLink">Load</a> |
         </nav>
     </header>
     <hr>
@@ -26,6 +28,7 @@
             <figcaption>Audio Player</figcaption>
 
             <audio id="audioPlayer" controls preload="metadata" src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio>
+            <!-- <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/t-rex-roar.mp3"></audio> -->
             
             <p id="metadataInfo"></p>
             
@@ -37,7 +40,7 @@
 
     </main>
     <hr>
-    <footer> Maphog @ <a href="https://github.com/Maxphog/">github</a> </footer>
+    <footer> Maxphog @ <a href="https://github.com/Maxphog/">Github</a> </footer>
     <script src="/browser_media_player/js/scripts.js"></script>
 </body>
 </html>

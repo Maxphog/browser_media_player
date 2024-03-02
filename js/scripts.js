@@ -1,5 +1,11 @@
+/**
+ * Author: Maxphog - Start at The README.md 
+ */
+
 // initialization of metadata value objects
 let duration;
+let author;
+let title;
 
 // initialization of metadata updating function
 function updateMetadataInfo(metadata) {
@@ -49,15 +55,35 @@ document.addEventListener("DOMContentLoaded", function() {
         // the moment we get a loadedmetadata event from the audio player
         console.log("Metadata loaded!");
         console.log(dom_AP);
+
+        // getting the duration of the audio file from the audio element
         let duration = dom_AP.duration;
+        // lets try author, title, and other metadata
+        let  author = dom_AP.author ;
+        let  title = dom_AP.title;
+        
         console.log("The duration is:", duration);
+        console.log("The author is:", author);
+        console.log("The title is:", title);
         
         // updating metadata 
-        updateMetadataInfo(`Duration: ${duration}`);
+        updateMetadataInfo(`
+            Duration: ${duration} 
+            <br>
+            Author: ${author}
+            <br>
+            Title: ${title}
+        `);
     });
 
     // updating metadata 
-    updateMetadataInfo(`Duration: ${duration}`);
+    updateMetadataInfo(`
+        Duration: ${duration} 
+        <br>
+        Author: ${author}
+        <br>
+        Title: ${title}
+    `);
 });
 
 
