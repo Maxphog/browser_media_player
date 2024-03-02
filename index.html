@@ -32,10 +32,10 @@
             <audio id="audioPlayer" controls src="/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3"></audio> -->
             
             <br>
-            <button id="toggleLoopBtn">Toggle Loop</button>
+            <button id="toggleLoopBtn" hidden >Toggle Loop</button>
             
             <br>
-            <a id="downloadLink"> Download audio </a>
+            <a id="downloadLink" hidden > Download audio </a>
 
             <figcaption>- Audio Player -</figcaption>
 
@@ -43,11 +43,11 @@
 
         <form action="#">
 
-            <label for="fileUpload">
+            <label for="fileUploadInput">
             
                 File:
             
-                <input id="fileUpload" type="file">
+                <input id="fileUploadInput" type="file">
 
             </label>
 
@@ -57,13 +57,13 @@
         
         <h2>MP3 metadata:</h2>
         
-        <div id="metadataInfoWrapper">
+        <secion id="metadataInfoWrapper">
             
             <h3>MD info:</h3>
             
             <p id="metadataInfo">♫</p>
 
-        </div>
+        </secion>
     </main>
     <hr>
     <footer> Maxphog @ <a href="https://github.com/Maxphog/">Github</a> </footer>

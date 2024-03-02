@@ -4,19 +4,20 @@
 
 /** 3/2/2024 code */
 
-// document Audio Player Wrapper (APW)
+// documents Audio Player Wrapper (APW)
 let dom_APW = document.getElementById("audioPlayerWrapper");
 console.log(dom_APW);
 
-// document Metadata Info paragraph
+// documents Metadata Info paragraph
 let dom_MDI = document.getElementById("metadataInfo");
 console.log(dom_MDI);
 
-// creating the main audio player
+// creating the documents main audio player
 let dom_MAP = document.createElement("audio");
 dom_MAP.setAttribute("class", "audioPlayer");
 dom_MAP.setAttribute("id", "mainAudioPlayer");
 dom_MAP.setAttribute("controls","");
+dom_MAP.setAttribute("hidden","");
 // console.log(dom_MAP);
 
 // append AP as the new first child of the wrapper
@@ -46,5 +47,15 @@ function setAudioSource(audioElement, source) {
 // setTimeout(function() {
 //     setAudioSource(dom_MAP,"/browser_media_player/test_sounds/AMBTrop_Jungle background 1_CS_USC.mp3");
 // }, 2000);
+
+// documents File Upload Form Logic 
+let mediaFileUploadForm = document.querySelector("form");
+mediaFileUploadForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    console.log("upload...  ");
+    console.log("Submission Event:",event);
+
+})
+console.log(mediaFileUploadForm);
 
 
