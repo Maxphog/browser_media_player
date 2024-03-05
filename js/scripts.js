@@ -230,8 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				"An error occurred during file upload. Please try again later."
 			);
 		}
+        /**
+         * EVENTS -+-+END+-+-> form
+         */
 	});
-	/**
-	 * EVENTS -+-+END+-+-> form
-	 */
-});
