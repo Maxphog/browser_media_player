@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	/**
-	 * EVENTS -+-+-+-+-< audio
+	 * EVENTS -+-+START+-+-< audio
 	 * name 	        Fired when
 	 *  audioprocess 	 The input buffer of a ScriptProcessorNode is ready to be processed.
 	 *  canplay      	 The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
@@ -91,193 +91,111 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 	// Add Event listener for 'canplay' event
 	dom_mainAudioPlayer.addEventListener("canplay", function (event) {
-		console.log(
-			"canplay event fired:",
-
-			event
-		);
+		console.log("canplay event fired:",event );
 	});
 
 	// Add Event listener for 'canplaythrough' event
 	dom_mainAudioPlayer.addEventListener("canplaythrough", function (event) {
-		console.log(
-			"canplaythrough event fired:",
-
-			event
-		);
+		console.log("canplaythrough event fired:",event );
 	});
 
 	// Add Event listener for 'complete' event
 	dom_mainAudioPlayer.addEventListener("complete", function (event) {
-		console.log(
-			"complete event fired:",
-
-			event
-		);
+		console.log("complete event fired:",event );
 	});
 
 	// Add Event listener for 'durationchange' event
 	dom_mainAudioPlayer.addEventListener("durationchange", function (event) {
-		console.log(
-			"durationchange event fired:",
-
-			event
-		);
+		console.log("durationchange event fired:",event );
 	});
 
 	// Add Event listener for 'emptied' event
 	dom_mainAudioPlayer.addEventListener("emptied", function (event) {
-		console.log(
-			"emptied event fired:",
-
-			event
-		);
+		console.log("emptied event fired:",event );
 	});
 
 	// Add Event listener for 'ended' event
 	dom_mainAudioPlayer.addEventListener("ended", function (event) {
-		console.log(
-			"ended event fired:",
-
-			event
-		);
+		console.log("ended event fired:",event );
 	});
 
 	// Add Event listener for 'loadeddata' event
 	dom_mainAudioPlayer.addEventListener("loadeddata", function (event) {
-		console.log(
-			"loadeddata event fired:",
-
-			event
-		);
+		console.log("loadeddata event fired:",event );
 	});
 
 	// Add Event listener for 'loadedmetadata' event
 	dom_mainAudioPlayer.addEventListener("loadedmetadata", function (event) {
-		console.log(
-			"loadedmetadata event fired:",
-
-			event
-		);
+		console.log("loadedmetadata event fired:",event );
 	});
 
 	// Add Event listener for 'loadstart' event
 	dom_mainAudioPlayer.addEventListener("loadstart", function (event) {
-		console.log(
-			"loadstart event fired:",
-
-			event
-		);
+		console.log("loadstart event fired:",event );
 	});
 
 	// Add Event listener for 'pause' event
 	dom_mainAudioPlayer.addEventListener("pause", function (event) {
-		console.log(
-			"pause event fired:",
-
-			event
-		);
+		console.log("pause event fired:",event );
 	});
 
 	// Add Event listener for 'play' event
 	dom_mainAudioPlayer.addEventListener("play", function (event) {
-		console.log(
-			"play event fired:",
-
-			event
-		);
+		console.log("play event fired:",event );
 	});
 
 	// Add Event listener for 'playing' event
 	dom_mainAudioPlayer.addEventListener("playing", function (event) {
-		console.log(
-			"playing event fired:",
-
-			event
-		);
+		console.log("playing event fired:",event );
 	});
 
 	// Add Event listener for 'ratechange' event
 	dom_mainAudioPlayer.addEventListener("ratechange", function (event) {
-		console.log(
-			"ratechange event fired:",
-
-			event
-		);
+		console.log("ratechange event fired:",event );
 	});
 
 	// Add Event listener for 'seeked' event
 	dom_mainAudioPlayer.addEventListener("seeked", function (event) {
-		console.log(
-			"seeked event fired:",
-
-			event
-		);
+		console.log("seeked event fired:",event );
 	});
 
 	// Add Event listener for 'seeking' event
 	dom_mainAudioPlayer.addEventListener("seeking", function (event) {
-		console.log(
-			"seeking event fired:",
-
-			event
-		);
+		console.log("seeking event fired:",event );
 	});
 
 	// Add Event listener for 'stalled' event
 	dom_mainAudioPlayer.addEventListener("stalled", function (event) {
-		console.log(
-			"stalled event fired:",
-
-			event
-		);
+		console.log("stalled event fired:",event );
 	});
 
 	// Add Event listener for 'suspend' event
 	dom_mainAudioPlayer.addEventListener("suspend", function (event) {
-		console.log(
-			"suspend event fired:",
-
-			event
-		);
+		console.log("suspend event fired:",event );
 	});
 
 	// Add Event listener for 'timeupdate' event
 	dom_mainAudioPlayer.addEventListener("timeupdate", function (event) {
-		console.log(
-			"timeupdate event fired:",
-
-			event
-		);
+		console.log("timeupdate event fired:",event );
 	});
 
 	// Add Event listener for 'volumechange' event
 	dom_mainAudioPlayer.addEventListener("volumechange", function (event) {
-		console.log(
-			"volumechange event fired:",
-
-			event
-		);
+		console.log("volumechange event fired:",event );
 	});
 
 	// Add Event listener for 'waiting' event
 	dom_mainAudioPlayer.addEventListener("waiting", function (event) {
-		console.log(
-			"waiting event fired:",
-
-			event
-		);
+		console.log("waiting event fired:",event );
 	});
 	/**
-	 * EVENTS -+-+-+-+-> audio
+	 * EVENTS -+-+END+-+-> audio
 	 */
 
 	/**
-	 * EVENTS -+-+-+-+-< form
+	 * EVENTS -+-+START+-+-< form
 	 */
-	// Event listener for file upload form submission
-	dom_fileUploadForm.addEventListener("submit", function (event) {
-		event.preventDefault(); // Prevent form submission
+	// Event listener for fileevent.preventDefault(); // Prevent form submission
 
 		console.log("upload...  ");
 
@@ -314,6 +232,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 	/**
-	 * EVENTS -+-+-+-+-> form
+	 * EVENTS -+-+END+-+-> form
 	 */
 });
