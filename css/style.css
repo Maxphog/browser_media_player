@@ -1,6 +1,6 @@
 :root {
-	--header-height: 50px;
-	--footer-height: 50px;
+	--header-height: 25px;
+	--footer-height: 25px;
 }
 
 body {
@@ -15,6 +15,7 @@ header {
 	background-color: #333;
 	color: #fff;
 	padding: 10px 0;
+	height: var(--header-height);
 }
 
 header nav {
@@ -99,9 +100,14 @@ footer {
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	height: var(--footer-height);
 }
 
 footer a {
 	color: #fff;
 	margin-top: auto;
+}
+
+hr {
+	width: 100%;
 }
