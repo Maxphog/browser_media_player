@@ -31,3 +31,6 @@ This project is licensed under the [MIT License](LICENSE).
 - 3/2/2024
     - https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
+- 3/4/2024
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+    - 
