@@ -195,42 +195,45 @@ document.addEventListener("DOMContentLoaded", function () {
 	/**
 	 * EVENTS -+-+START+-+-< form
 	 */
-	// Event listener for fileevent.preventDefault(); // Prevent form submission
+    // Event listener for file upload form submission
+    dom_fileUploadForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
 
-		console.log("upload...  ");
+        console.log("upload...  ");
 
-		console.log("Submission Event:", event);
+        console.log("Submission Event:", event);
 
-		try {
-			const file = dom_fileUploadInput.files[0];
-			if (file) {
-				// Check if the file extension is mp3
-				if (file.name.toLowerCase().endsWith(".mp3")) {
-					const fileURL = URL.createObjectURL(file);
-					setAudioSource(dom_mainAudioPlayer, fileURL);
+        try {
+            const file = dom_fileUploadInput.files[0];
+            if (file) {
+                // Check if the file extension is mp3
+                if (file.name.toLowerCase().endsWith('.mp3')) {
+                    const fileURL = URL.createObjectURL(file);
+                    setAudioSource(dom_mainAudioPlayer, fileURL);
 
-					dom_downloadLink.setAttribute("href", fileURL);
+                    dom_downloadLink.setAttribute("href", fileURL)
 
-					dom_mainAudioPlayer.hidden = false;
-				} else {
-					console.error("File is not an MP3");
-					// Provide user feedback about the error
-					alert("Please select an MP3 file.");
-				}
-			} else {
-				console.error("No file selected for upload");
-				// Provide user feedback about the error
-				alert("Please select a file before uploading.");
-			}
-		} catch (error) {
-			// Log the error to aid in debugging
-			console.error("Error occurred during file upload:", error);
-			// Provide user feedback about the error
-			alert(
-				"An error occurred during file upload. Please try again later."
-			);
-		}
-        /**
-         * EVENTS -+-+END+-+-> form
-         */
-	});
+                    dom_mainAudioPlayer.hidden = false;
+                } else {
+                    console.error("File is not an MP3");
+                    // Provide user feedback about the error
+                    alert("Please select an MP3 file.");
+                }
+            } else {
+                console.error("No file selected for upload");
+                // Provide user feedback about the error
+                alert("Please select a file before uploading.");
+            }
+        } catch (error) {
+            // Log the error to aid in debugging
+            console.error("Error occurred during file upload:", error);
+            // Provide user feedback about the error
+            alert("An error occurred during file upload. Please try again later.");
+        }
+    });
+    /**
+	 * EVENTS -+-+END+-+-< form
+	 */
+
+
+});
