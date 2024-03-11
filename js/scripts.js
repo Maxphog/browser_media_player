@@ -2,10 +2,15 @@
  * Author: Maxphog - Start at The README.md
  */
 
-/** 3/4/2024 code */
+/** 3/11/2024 code */
+
+// Import the AudioPlayer class from the AudioPlayer.js file
+import AudioPlayer from './AudioPlayer.js';
+
 
 // Ensure that the DOM content is fully loaded before executing scripts
 document.addEventListener("DOMContentLoaded", function () {
+
 	// Select necessary DOM elements
 
 	// documents Audio Player Wrapper (APW)
@@ -20,28 +25,45 @@ document.addEventListener("DOMContentLoaded", function () {
 	const dom_fileUploadInput = document.getElementById("fileUploadInput");
 
 	// creating the documents main audio player
-	const dom_mainAudioPlayer = document.createElement("audio");
-	dom_mainAudioPlayer.setAttribute("class", "audioPlayer");
-	dom_mainAudioPlayer.setAttribute("id", "mainAudioPlayer");
-	dom_mainAudioPlayer.setAttribute("controls", "");
-	dom_mainAudioPlayer.setAttribute("hidden", "");
 
-	// append AP as the new first child of the wrapper
-	dom_audioPlayerWrapper.insertBefore(
-		dom_mainAudioPlayer,
-		dom_audioPlayerWrapper.firstChild
+	const dom_mainAudioPlayer = new AudioPlayer(
+		dom_audioPlayerWrapper,
+		'',
+		'audioPlayer',
+		'mainAudioPlayer',
+		true,
+		false
 	);
-	// console.log(dom_mainAudioPlayer);
-	// dom_mainAudioPlayer.setAttribute("src", "/browser_media_player/test_sounds/t-rex-roar.mp3")
-	console.log(dom_mainAudioPlayer);
 
+	console.log("dom_mainAudioPlayer:", dom_mainAudioPlayer);
+	
+	// Call the mount_to_parent method to prepend the audio player to its parent
+	dom_mainAudioPlayer.mount_to_parent();
+	
+	// const dom_mainAudioPlayer = document.createElement("audio");
+	// dom_mainAudioPlayer.setAttribute("class", "audioPlayer");
+	// dom_mainAudioPlayer.setAttribute("id", "mainAudioPlayer");
+	// dom_mainAudioPlayer.setAttribute("controls", "");
+	// dom_mainAudioPlayer.setAttribute("hidden", "");
+
+	// // append AP as the new first child of the wrapper
+	// dom_audioPlayerWrapper.insertBefore(
+	// 	dom_mainAudioPlayer,
+	// 	dom_audioPlayerWrapper.firstChild
+	// );
+
+	console.log(dom_mainAudioPlayer);
+	
 	// documents loop audio button
 	const dom_toggleLoopBtn = document.getElementById("toggleLoopBtn");
 	console.log(dom_toggleLoopBtn);
-
+	
 	// documents download audio button
 	const dom_downloadLink = document.getElementById("downloadLink");
 	console.log(dom_downloadLink);
+	
+	console.log("-----------------------------------------------------------------");
+	// errors beginning 
 
 	/**
 	 *  This function sets the src attribute of our audio elements.
